@@ -59,6 +59,7 @@ const uint8_t MICROBIT_RADIO_POWER_LEVEL[] = {0xD8, 0xD8, 0xEC, 0xF0, 0xF4, 0xF8
 
 MicroBitRadio* MicroBitRadio::instance = NULL;
 
+#if 0
 extern "C" void RADIO_IRQHandler(void)
 {
     if(NRF_RADIO->EVENTS_READY)
@@ -96,6 +97,7 @@ extern "C" void RADIO_IRQHandler(void)
         NRF_RADIO->TASKS_START = 1;
     }
 }
+#endif
 
 /**
   * Constructor.
